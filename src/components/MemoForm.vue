@@ -18,20 +18,27 @@ export default {
   },
   methods: {
     submitMemo () {
+      const options = {
+        timzone: 'Asia/Seoul',
+        month: 'long',
+        day: '2-digit',
+        weekday: 'short'
+      }
+      const memoDate = new Intl.DateTimeFormat('kr-KR', options).format(new Date())
       const memoObj = {
         memoTitle: this.memoTitle,
         memoContent: this.memoContent,
-        memoDate: new Date()
+        memoDate
       }
 
       const memosInLS = JSON.parse(localStorage.getItem('memos'))
-      console.log('LS check --->', memosInLS)
       if (!memosInLS || memosInLS.length === 0) {
-        localStorage.setItem('memos', JSON.stringify([].push(memoObj)))
+        localStorage.setItem('memos', JSON.stringify([memoObj]))
       } else {
         memosInLS.push(memoObj)
-        localStorage.setItem('memos', memosInLS)
+        localStorage.setItem('memos', JSON.stringify(memosInLS))
       }
+      this.$emit('memoListUpdated')
     }
   }
 }

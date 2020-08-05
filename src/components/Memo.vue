@@ -9,21 +9,18 @@
 <script>
 export default {
   name: 'Memo',
-  data () {
-    return {
-      memoTitle: '',
-      memoContent: '',
-      memoDate: ''
-    }
-  },
-  created () {
-    const memoInLS = JSON.parse(localStorage.getItem('memos'))
-    if (memoInLS && memoInLS.length > 0) {
-      for (const memo of memoInLS) {
-        this.memoTitle = memo.memoTitle
-        this.memoContent = memo.memoContent
-        this.memoDate = memo.memoDate
-      }
+  props: {
+    memoTitle: {
+      type: String,
+      required: true
+    },
+    memoContent: {
+      type: String,
+      required: false
+    },
+    memoDate: {
+      type: String,
+      required: true
     }
   }
 }

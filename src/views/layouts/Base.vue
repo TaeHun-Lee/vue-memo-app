@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import AppHeader from '../components/AppHeader'
-import MemoApp from '../views/MemoApp'
+import AppHeader from '@/components/AppHeader'
+import MemoApp from '@/views/MemoApp'
 
 export default {
   name: 'Base',
