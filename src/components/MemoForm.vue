@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <input v-model="memoTitle" />
-    <input v-model="memoContent" />
-    <button @click="submitMemo">제출</button>
+  <div class="memoForm">
+    <input v-model="memoTitle" placeholder="메모 제목" />
+    <textarea v-model="memoContent" placeholder="메모 내용" />
+    <input class="memoSubmit" type="submit" @click.prevent="submitMemo" value="제출" />
   </div>
 </template>
 
@@ -43,7 +43,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

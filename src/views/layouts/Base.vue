@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <app-header />
     <memo-app />
   </div>
@@ -18,6 +18,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
 </style>

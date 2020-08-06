@@ -3,14 +3,15 @@
     <memo-form 
       @memoListUpdated="memoListUpdated"
     />
-    <template v-for="(memo, i) of memosInArray">
-      <memo
+    <div class="columns">
+      <memo class="column"
+      v-for="(memo, i) of memosInArray"
       :memoTitle="memo.memoTitle"
       :memoContent="memo.memoContent"
       :memoDate="memo.memoDate"
       :key="i"
       />
-    </template>
+    </div>
   </div>
 </template>
 
@@ -49,7 +50,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

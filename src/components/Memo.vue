@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>{{ memoTitle }}</h1>
-    <h2>{{ memoContent }}</h2>
-    <h3>{{ memoDate }}</h3>
+    <h2>{{ memoTitle }}</h2>
+    <p>{{ memoContent }}</p>
+    <p>{{ memoDate }}</p>
   </div>
 </template>
 
@@ -25,7 +25,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
