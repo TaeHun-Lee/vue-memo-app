@@ -1,22 +1,18 @@
 <template>
-  <div class="wrapper">
-    <app-header />
-    <memo-app />
-  </div>
+  <v-main>
+    <v-container>
+      <memo-app />
+    </v-container>
+  </v-main>
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader'
 import MemoApp from '@/views/MemoApp'
 
 export default {
   name: 'Base',
   components: {
-    AppHeader,
     MemoApp
   }
 }
 </script>
-
-<style lang="scss">
-</style>

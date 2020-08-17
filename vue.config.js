@@ -1,11 +1,12 @@
-const path = require('path');
-
 module.exports = {
-    configureWebpack: {
-        resolve: {
-            alias: {
-                '@': path.join(__dirname, 'src/')
-            }
-        }
+  "configureWebpack": {
+    "resolve": {
+      "alias": {
+        "@": "C:\\Users\\dlryt\\Desktop\\Web\\vue-memo-app\\src\\"
+      }
     }
+  },
+  "transpileDependencies": [
+    "vuetify"
+  ]
 }
