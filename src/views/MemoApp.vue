@@ -6,15 +6,15 @@
           <!-- LocalStorage / Vuex 선택 -->
           <memo-header />
         </v-col>
-        <v-col md="8" sm="12">
+        <v-col md="8" sm="12" class="topRight">
           <!-- Store 상태에 따라 Form / List 형태로 Component 가변 -->
-          <component class="topRight" :is="this.currentView.topRight" :memos="topRightProps" />
+          <component :is="this.currentView.topRight" :memos="topRightProps" />
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="12">
+    <v-col cols="12" class="bottom">
       <!-- Store 상태에 따라 Form / Memo 형태로 Component 가변 -->
-      <component class="bottom" :is="this.currentView.bottom" :memo="bottomProps" @memoListUpdated="memoListUpdated"/>
+      <component :is="this.currentView.bottom" :memo="bottomProps" @memoListUpdated="memoListUpdated"/>
     </v-col>
   </v-row>
 </template>

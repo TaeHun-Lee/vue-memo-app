@@ -86,6 +86,7 @@ export default {
       } else if (this.currentList === 'VX') {
         this.$store.commit('memos/setMemosInStore', memoObj)
       }
+      this.$store.commit('memos/deleteMemoForm')
       this.$emit('memoListUpdated')
     },
     clickTopRightMemoForm () {

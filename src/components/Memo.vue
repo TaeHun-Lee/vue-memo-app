@@ -1,5 +1,5 @@
 <template>
-  <v-card class="ma-1">
+  <v-card class="ma-1 pa-4">
     <!-- 읽기 상태 -->
     <template v-if="isRead">
       <v-card-title @click="changeToFixState">

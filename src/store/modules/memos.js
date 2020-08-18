@@ -50,6 +50,13 @@ const memos = {
      */
     setMemoForm (state, payload) {
       state.memoForm = payload
+    },
+    /**
+     * Form Data 비우기
+     * @param {*} state 
+     */
+    deleteMemoForm (state) {
+      state.memoForm = {}
     }
   }
 }
